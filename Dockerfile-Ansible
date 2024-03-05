@@ -42,7 +42,7 @@ RUN python3 -m pip install -r "${working_dir}/requirements.txt"  && \
 RUN ansible-galaxy collection install \
         community.general \
         kubernetes.core \ 
-        --ignore-certs \
+#        --ignore-certs \
         -p /usr/share/ansible/collections && \
     mkdir /.ansible && \
     chgrp -R 0 /.ansible && \
